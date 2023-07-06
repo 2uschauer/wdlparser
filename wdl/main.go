@@ -50,7 +50,7 @@ func printLevelPrefix(ctx antlr.ParserRuleContext) {
 }
 
 func main() {
-	input, _ := antlr.NewFileStream("/Users/bytedance/Downloads/wdl/no.wdl")
+	input, _ := antlr.NewFileStream("./demo.wdl")
 	lexer := parser.NewWdlV1Lexer(input)
 	stream := antlr.NewCommonTokenStream(lexer, 0)
 	p := parser.NewWdlV1Parser(stream)
